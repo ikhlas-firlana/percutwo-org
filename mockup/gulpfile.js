@@ -5,7 +5,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('default', ['ejs'], function() {
     browserSync.init({
-        server: "./dist"
+        server: ["./dist", "./"]
     });
 
     gulp.watch("src/**/*.ejs", ['ejs', browserSync.reload]);
