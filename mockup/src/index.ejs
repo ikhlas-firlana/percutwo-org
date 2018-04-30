@@ -1,6 +1,26 @@
-<% include ./partials/head.ejs %>
-<h1>Contoh</h1>
-<p>
-    welcome Hello
-</p>
+<%- include('partials/head', {
+    css: ['assets/css/signin.css']
+}) %>
+<div class="row bg">
+    <div class="col-sm cover">
+    </div>
+    <div class="col-sm form">
+        <form align="center" class="form-signin">
+            <img class="mb-4 img-thumbnail" src="assets/img/icon.jpeg" alt="icon percutwo" width="72" height="72">
+            <h1 class="h4 mb-3 font-weight-normal">Percussion of Twenty two</h1>
+            <h2 class="h5 mb-3 font-weight-normal text-muted">member only</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control mb-3" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Password" required>
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <hr />
+            <div class="strike text-muted"><span>login with</span></div>
+            <hr />
+            <img class="btn-img" src="/assets/img/google_signin_buttons/web/1x/btn_google_signin_light_normal_web.png" />
+            <img class="btn-img" src="/assets/img/btn-facebook.png" />
+        </form>
+    </div>
+</div>
 <% include ./partials/footer.ejs %>

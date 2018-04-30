@@ -1,9 +1,13 @@
+<% css = typeof css === "undefined" ? []: css %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/angular/angular.js/master/images/favicon.ico" />
     <title>index</title>
-    <link type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <% css.length > 0 && css.forEach((value) => { %>
+        <link rel="stylesheet" href="<%= value %>" />
+    <% }); %>
 </head>
 <body>
