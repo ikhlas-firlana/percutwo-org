@@ -1,0 +1,22 @@
+<%- include('partials/head', {
+css: ['assets/css/dashboard.css']
+}) %>
+<% include ./dashboard/nav.ejs %>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <% include ./dashboard/sidebar.ejs %>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <% include ./dashboard/content/group.ejs %>
+        </main>
+    </div>
+</div>
+<%- include('partials/footer', {
+js: [
+    'https://unpkg.com/feather-icons/dist/feather.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js',
+    'assets/js/dashboard.js'
+]
+}) %>
